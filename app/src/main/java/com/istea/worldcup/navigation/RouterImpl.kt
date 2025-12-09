@@ -5,8 +5,9 @@ import androidx.navigation.NavController
 class RouterImpl(val navController: NavController): Router {
 
     override fun openGroupDetail(groupId: String) {
-        navController.navigate("detalle/J")
+        navController.navigate(route = "detalle/$groupId")
     }
+
 
     override fun back() {
         navController.popBackStack()
